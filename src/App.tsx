@@ -99,6 +99,7 @@ export const App = () => {
                   flexBasis: "33%",
                   position: "relative",
                   borderRadius: "16px",
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   if (!isGameStopped) {
@@ -127,6 +128,7 @@ export const App = () => {
                   style={{
                     width: "100%",
                     height: "100%",
+                    minHeight: "105px",
                     objectFit: "cover",
                     display: "block",
                     borderRadius: "16px",
