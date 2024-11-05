@@ -6,6 +6,9 @@ import money1 from "./assets/money1.jpg";
 import money2 from "./assets/money2.jpg";
 import money3 from "./assets/money3.jpg";
 import money4 from "./assets/money4.jpg";
+import read1 from "./assets/read1.jpeg";
+import read2 from "./assets/read2.jpg";
+import read3 from "./assets/read3.png";
 import { appSt } from "./style.css";
 
 import { useEffect, useState } from "react";
@@ -156,20 +159,133 @@ export const App = () => {
         {success && (
           <>
             <Typography.Text weight="bold" view="primary-large">
-              Приз!
+              Кэшбэк у партнеров
             </Typography.Text>
-            <Typography.Text weight="regular" view="primary-medium">
-              До 80% кэшбэка в Яндекс.Маркете
-            </Typography.Text>
+            <Gap size={24} />
+            <div className={appSt.gifts}>
+              <div className={appSt.gift}>
+                <div className={appSt.imageWrapper}>
+                  <img src={read3} alt="" className={appSt.giftImage} />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <Typography.Text weight="regular" view="primary-large">
+                      Литрес
+                    </Typography.Text>
+                    <Gap size={8} />
+                    <Typography.Text
+                      weight="regular"
+                      view="primary-small"
+                      color="secondary"
+                    >
+                      За оплату картой онлайн
+                    </Typography.Text>
+                  </div>
+
+                  <Typography.Text weight="regular" view="primary-large">
+                    20%
+                  </Typography.Text>
+                </div>
+              </div>
+              <div className={appSt.gift}>
+                <div className={appSt.imageWrapper}>
+                  <img src={read1} alt="" className={appSt.giftImage} />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <Typography.Text weight="regular" view="primary-large">
+                      Читай Город
+                    </Typography.Text>
+                    <Gap size={8} />
+                    <Typography.Text
+                      weight="regular"
+                      view="primary-small"
+                      color="secondary"
+                    >
+                      За оплату картой онлайн
+                    </Typography.Text>
+                  </div>
+
+                  <Typography.Text weight="regular" view="primary-large">
+                    10%
+                  </Typography.Text>
+                </div>
+              </div>
+              <div className={appSt.gift}>
+                <div className={appSt.imageWrapper}>
+                  <img
+                    src={read2}
+                    alt=""
+                    className={appSt.giftImage}
+                    style={{ transform: "scale(1.1)" }}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <Typography.Text weight="regular" view="primary-large">
+                      Буквоед
+                    </Typography.Text>
+                    <Gap size={8} />
+                    <Typography.Text
+                      weight="regular"
+                      view="primary-small"
+                      color="secondary"
+                    >
+                      За оплату картой онлайн
+                    </Typography.Text>
+                  </div>
+
+                  <Typography.Text weight="regular" view="primary-large">
+                    10%
+                  </Typography.Text>
+                </div>
+              </div>
+            </div>
           </>
         )}
       </div>
 
-      <Gap size={40} />
+      <Gap size={96} />
 
       <div className={appSt.bottomBtnThx}>
         {success && (
-          <ButtonMobile block view="primary" href="">
+          <ButtonMobile block view="primary" href="https://alfa.me/cbpartner">
             Забрать приз
           </ButtonMobile>
         )}
