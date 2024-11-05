@@ -33,10 +33,23 @@ export const App = () => {
     src: string;
   }>(null);
 
+  const clickSuccess = () => {
+    window.gtag("event", "prize_page_view", {
+      variant_name: "reactivation_2",
+    });
+  };
+
+  const clickSubmit = () => {
+    window.gtag("event", "prize_get_click", {
+      variant_name: "reactivation_2",
+    });
+  };
+
   useEffect(() => {
     if (selected !== null) {
       if (selected.isMoney) {
         setSuccess(true);
+        clickSuccess();
       } else {
         setError(true);
       }
@@ -285,7 +298,7 @@ export const App = () => {
 
       <div className={appSt.bottomBtnThx}>
         {success && (
-          <ButtonMobile block view="primary" href="https://alfa.me/cbpartner">
+          <ButtonMobile block view="primary" href="https://alfa.me/cbpartner" onClick={clickSubmit}>
             Забрать приз
           </ButtonMobile>
         )}

@@ -1,6 +1,7 @@
 declare global {
   interface Window {
     dataLayer: unknown[];
+    gtag: (e: "event", action: string, variant_name: Record<string, string>) => void;
   }
 }
 
