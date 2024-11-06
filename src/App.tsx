@@ -45,6 +45,12 @@ export const App = () => {
     });
   };
 
+  const clickInteraction = () => {
+    window.gtag("event", "game_interaction", {
+      variant_name: "reactivation_2",
+    });
+  };
+
   useEffect(() => {
     if (selected !== null) {
       if (selected.isMoney) {
@@ -119,6 +125,7 @@ export const App = () => {
                 }}
                 onClick={() => {
                   if (!isGameStopped) {
+                    clickInteraction();
                     setSelected(image);
                     setIsGameStopped(true);
                   }
