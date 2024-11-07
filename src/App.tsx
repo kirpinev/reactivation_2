@@ -75,7 +75,7 @@ export const App = () => {
         >
           {success
             ? "Поздравляем, вы выиграли приз!"
-            : "На каких фото изображены деньги?"}
+            : "Найдите фото с изображением денег и получите приз"}
         </Typography.TitleResponsive>
         {!success && (
           <Typography.Text weight="regular" view="primary-medium">
@@ -179,7 +179,7 @@ export const App = () => {
         {success && (
           <>
             <Typography.Text weight="bold" view="primary-large">
-              Кэшбэк у партнеров
+              Кэшбэк у партнёров
             </Typography.Text>
             <Gap size={24} />
             <div className={appSt.gifts}>
