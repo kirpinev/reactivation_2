@@ -320,7 +320,7 @@ export const App = () => {
               setInitialImages(initialImages.sort(() => 0.5 - Math.random()));
             }}
           >
-            Сыграть еще
+            Сыграть ещё
           </ButtonMobile>
         )}
       </div>
